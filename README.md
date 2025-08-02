@@ -1,8 +1,8 @@
-# 王兴飞个人网站
+# WANGXINGFEI个人网站
 
 ## 项目简介
 
-这是王兴飞的个人网站，展现作为资深前端开发工程师的专业形象和技术能力。
+这是WANGXINGFEI的个人网站，展现作为资深前端开发工程师的专业形象和技术能力。
 
 ## 网站特色
 
@@ -84,8 +84,8 @@
 
 ## 联系方式
 
-- **邮箱**: imwangxingfei@foxmail.com
-- **电话**: 17789389956
+- **邮箱**: xingfeiwang6@gmail.com
+- **电话**: 195****5951
 - **GitHub**: https://github.com/afeiw
 - **LinkedIn**: https://www.linkedin.com/in/wangxingfei
 - **技术文档**: https://afeiw.github.io/comWangXingFei/
@@ -101,4 +101,4 @@
 
 ---
 
-© 2025 王兴飞 - 资深前端开发工程师
+© 2025 WANGXINGFEI - 资深前端开发工程师
