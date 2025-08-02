@@ -1,0 +1,55 @@
+/* 性能优化样式 */
+
+/* 硬件加速 */
+.gallery-grid__image,
+.header__photo-img,
+.preview-image,
+.password-content,
+.image-preview {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity, filter;
+}
+
+/* 优化动画性能 */
+.gallery-grid__image.blurred {
+  will-change: filter, opacity;
+}
+
+.preview-image {
+  will-change: transform, opacity;
+}
+
+/* 减少重绘 */
+.header-image .js-parallax {
+  will-change: transform;
+}
+
+/* 优化滚动性能 */
+.main {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 优化字体渲染 */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 减少布局抖动 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 优化图片加载 */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+} 

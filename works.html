@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>王兴飞 - 项目作品</title>
-    <!-- 不缓存 -->
-    <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <meta http-equiv="expires" content="0" />
+    <!-- 缓存优化 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
     <!-- Meta Data -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -60,9 +58,13 @@
       type="image/png"
     />
 
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css" />
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="assets/styles/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/demo/style-demo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
+      <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css" />
+    </noscript>
     
     <style>
       /* 项目图片模糊效果 */
@@ -517,12 +519,11 @@
       </clipPath>
     </svg>
 
-    <!-- JavaScripts -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/common.js"></script>
-
-    <script src="assets/demo/plugins-demo.js"></script>
+    <!-- JavaScripts - 异步加载 -->
+    <script src="assets/js/jquery-3.4.1.min.js" defer></script>
+    <script src="assets/js/plugins.min.js" defer></script>
+    <script src="assets/js/common.js" defer></script>
+    <script src="assets/demo/plugins-demo.js" defer></script>
     
     <script>
       // 密码保护功能
